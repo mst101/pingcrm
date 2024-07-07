@@ -7,6 +7,10 @@ import SelectInput from '@/Shared/SelectInput.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
 import TrashedMessage from '@/Shared/TrashedMessage.vue'
 
+defineOptions({
+  layout: Layout,
+})
+
 const props = defineProps({
   user: Object,
 })
@@ -40,7 +44,7 @@ const restore = () => {
 }
 </script>
 <template>
-  <Layout>
+  <div>
     <Head :title="`${form.first_name} ${form.last_name}`" />
     <div class="flex justify-start mb-8 max-w-3xl">
       <h1 class="text-3xl font-bold">
@@ -70,5 +74,5 @@ const restore = () => {
         </div>
       </form>
     </div>
-  </Layout>
+  </div>
 </template>

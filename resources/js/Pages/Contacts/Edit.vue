@@ -6,6 +6,10 @@ import SelectInput from '@/Shared/SelectInput.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
 import TrashedMessage from '@/Shared/TrashedMessage.vue'
 
+defineOptions({
+  layout: Layout,
+})
+
 const props = defineProps({
   contact: Object,
   organizations: Array,
@@ -41,7 +45,7 @@ const restore = () => {
 }
 </script>
 <template>
-  <Layout>
+  <div>
     <Head :title="`${form.first_name} ${form.last_name}`" />
     <h1 class="mb-8 text-3xl font-bold">
       <Link class="text-indigo-400 hover:text-indigo-600" href="/contacts">Contacts</Link>
@@ -76,5 +80,5 @@ const restore = () => {
         </div>
       </form>
     </div>
-  </Layout>
+  </div>
 </template>

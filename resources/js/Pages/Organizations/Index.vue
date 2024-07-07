@@ -7,6 +7,10 @@ import Layout from '@/Shared/Layout.vue'
 import Pagination from '@/Shared/Pagination.vue'
 import SearchFilter from '@/Shared/SearchFilter.vue'
 
+defineOptions({
+  layout: Layout,
+})
+
 const props = defineProps({
   filters: Object,
   organizations: Object,
@@ -30,7 +34,7 @@ const reset = () => {
 }
 </script>
 <template>
-  <Layout>
+  <div>
     <Head title="Organizations" />
     <h1 class="mb-8 text-3xl font-bold">Organizations</h1>
     <div class="flex items-center justify-between mb-6">
@@ -87,5 +91,5 @@ const reset = () => {
       </table>
     </div>
     <Pagination class="mt-6" :links="organizations.links" />
-  </Layout>
+  </div>
 </template>

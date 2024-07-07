@@ -5,6 +5,10 @@ import TextInput from '@/Shared/TextInput.vue'
 import SelectInput from '@/Shared/SelectInput.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
 
+defineOptions({
+  layout: Layout,
+})
+
 const form = useForm({
   name: null,
   email: null,
@@ -21,7 +25,7 @@ const store = () => {
 }
 </script>
 <template>
-  <Layout>
+  <div>
     <Head title="Create Organization" />
     <h1 class="mb-8 text-3xl font-bold">
       <Link class="text-indigo-400 hover:text-indigo-600" href="/organizations">Organizations</Link>
@@ -48,5 +52,5 @@ const store = () => {
         </div>
       </form>
     </div>
-  </Layout>
+  </div>
 </template>

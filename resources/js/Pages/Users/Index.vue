@@ -6,6 +6,10 @@ import Icon from '@/Shared/Icon.vue'
 import Layout from '@/Shared/Layout.vue'
 import SearchFilter from '@/Shared/SearchFilter.vue'
 
+defineOptions({
+  layout: Layout,
+})
+
 const props = defineProps({
   filters: Object,
   users: Object,
@@ -29,7 +33,7 @@ const reset = () => {
 }
 </script>
 <template>
-  <Layout>
+  <div>
     <Head title="Users" />
     <h1 class="mb-8 text-3xl font-bold">Users</h1>
     <div class="flex items-center justify-between mb-6">
@@ -88,5 +92,5 @@ const reset = () => {
         </tr>
       </table>
     </div>
-  </Layout>
+  </div>
 </template>

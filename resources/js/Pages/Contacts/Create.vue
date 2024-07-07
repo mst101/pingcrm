@@ -5,6 +5,10 @@ import TextInput from '@/Shared/TextInput.vue'
 import SelectInput from '@/Shared/SelectInput.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
 
+defineOptions({
+  layout: Layout,
+})
+
 defineProps({
   organizations: Array,
 })
@@ -27,7 +31,7 @@ const store = () => {
 }
 </script>
 <template>
-  <Layout>
+  <div>
     <Head title="Create Contact" />
     <h1 class="mb-8 text-3xl font-bold">
       <Link class="text-indigo-400 hover:text-indigo-600" href="/contacts">Contacts</Link>
@@ -59,5 +63,5 @@ const store = () => {
         </div>
       </form>
     </div>
-  </Layout>
+  </div>
 </template>
