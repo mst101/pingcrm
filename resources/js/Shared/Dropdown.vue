@@ -46,12 +46,12 @@ const show = ref(false)
 
 <template>
   <div class="relative">
-    <div @click="show = !show" class="flex h-full cursor-pointer">
+    <div class="flex h-full cursor-pointer" @click="show = !show">
       <slot />
     </div>
 
     <!-- Full Screen Dropdown Overlay -->
-    <div v-show="show" class="fixed inset-0 z-40" @click="show = false"></div>
+    <div v-show="show" class="fixed inset-0 z-40" @click="show = false" />
 
     <Transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
       <div v-show="show" class="absolute z-50 rounded-md shadow-lg" :class="[widthClass, alignmentClasses]" style="display: none" @click="show = false">
